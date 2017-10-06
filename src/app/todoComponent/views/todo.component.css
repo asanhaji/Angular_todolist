@@ -1,0 +1,46 @@
+p {
+    margin: 0;
+}
+.left-todo {
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+}
+.up-todo {
+    display: flex;
+    justify-content : space-between;
+    align-items: center;
+}
+.bottom-todo {
+    text-align: left;
+    padding-bottom: 10px;
+}
+.bottom-todo p {
+    padding-left: 20px;
+}
+.config {
+    padding-right: 20px;
+}
+.config a {
+    cursor: pointer;
+}
+.panel-body {
+    padding: 10px;
+}
+.panel-body p {
+    margin: 0;
+    margin-left: 10px;
+}
+#checkBox {
+  margin: 0;
+}
+.bottom-todo-header{
+    display: flex;
+    justify-content : space-between;
+    padding-right: 20px;
+}
+.bottom-todo-header p {
+    font-size: smaller;
+    color: #666;
+    margin-bottom: 5px;
+}

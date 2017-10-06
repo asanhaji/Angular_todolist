@@ -1,0 +1,12 @@
+<div class="col-md-8 col-md-offset-2">
+    <div class="list-buttons">
+        <button type="button" class="btn btn-danger" [disabled]="!checkBoxSelected()" (click)="deleteSelected()">delete selected</button>
+        <div>Todos name filter : <input type="text" name="todoFilter" (input)="filterInputChange($event)" > </div>
+        <button type="button" class="btn btn-primary" (click)="showMessageForm()">add Todo</button>
+    </div>
+    <div style="clear:both"></div>
+
+    <app-todo [todo]="todo" [index]="index" *ngFor="let todo of todos; let index = index">
+
+    </app-todo>
+</div>

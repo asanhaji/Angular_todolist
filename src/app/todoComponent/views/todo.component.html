@@ -1,0 +1,33 @@
+<div class="panel panel-default">
+    <div class="up-todo">
+        <div class="left-todo">
+            <input id="checkBox" type="checkbox" name="status" (change)="statusChange()" [checked]="todo.status">
+            <div class="panel-body">
+                <p>{{ todo.name }}</p>
+            </div>
+        </div>
+        <div class="config">
+            <a (click)="onMore()">show more</a> -
+            <a (click)="onEdit()">edit</a> -
+            <a (click)="onDelete()">delete</a>
+        </div>
+    </div>
+    <div class="bottom-todo" id="{{ index }}">
+        <div class="bottom-todo-header">
+            <p>description : </p>
+            <div>
+                <div *ngIf="todo.edited_at;then edited else created"></div>
+                <ng-template #edited>
+                    <p>edited at : {{ todo.edited_at | date : "MMM d, y h:mm a" }}</p>
+                </ng-template>
+                <ng-template #created>
+                    <p>created at : {{ todo.created_at | date : "MMM d, y h:mm a" }}</p>
+                </ng-template>
+            </div>
+        </div>
+        <div>
+            <p> {{ todo.description }} </p>
+
+        </div>
+    </div>
+</div>
